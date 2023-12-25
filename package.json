@@ -1,0 +1,38 @@
+{
+  "name": "wdio-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js",
+    "android": "PLATFORM=ANDROID npx wdio run config/wdio.android.config.js --spec",
+    "ios": "PLATFORM=IOS npx wdio run config/wdio.ios.config.js --spec",
+    "cucumber:android": "PLATFORM=ANDROID npx wdio run config/wdio.cucumber.config.js --spec",
+    "cucumber-tags:android": "PLATFORM=ANDROID npx wdio run config/wdio.cucumber.config.js --cucumberOpts.tagExpression",
+    "android:chrome:browser": "PLATFORM=ANDROID npx wdio run config/wdio.chromebrowser.config.js --spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^8.20.5",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/register": "^7.22.15",
+    "@wdio/allure-reporter": "^8.23.1",
+    "@wdio/appium-service": "^8.20.4",
+    "@wdio/cucumber-framework": "^8.23.1",
+    "@wdio/globals": "^8.21.0",
+    "@wdio/local-runner": "^8.20.5",
+    "@wdio/mocha-framework": "^8.20.3",
+    "@wdio/spec-reporter": "^8.20.0",
+    "allure-commandline": "^2.24.1",
+    "appium-uiautomator2-driver": "^2.32.3",
+    "appium-xcuitest-driver": "^5.8.0",
+    "chai": "^4.3.10"
+  }
+}
